@@ -1,0 +1,31 @@
+main() {
+	acertou = 0
+	max = 10
+	chute = 12 + max
+	while (acertou != 1) {
+		printString("Pensei em um numero entre 1 e ")
+		print(max)
+		num = random(max)
+
+		while (chute != num) {
+			printString("Digite um numero")
+			chute = readInt()
+				if (chute < num) {
+					printColoredString("Chute baixo", 3)
+					play()
+				}
+				if (chute > num) {
+					printColoredString("Chute alto", 3)
+					play()
+				}
+				if (chute == num) {
+					printColoredString("Acertou", 2)
+					printString("Digite 0 para jogar novamente")
+					acertou = readInt()
+					play()
+					play()
+					play()
+				}
+		}
+	}
+}
